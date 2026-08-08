@@ -1,0 +1,7 @@
+{
+  "extends": "@100xbansal/typescript-config/base.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["src", "*.config.ts"]
+}
