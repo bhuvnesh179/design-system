@@ -1,0 +1,7 @@
+{
+  "extends": "@100xbansal/typescript-config/react-library.json",
+  "compilerOptions": {
+    "types": ["node", "@testing-library/jest-dom"]
+  },
+  "include": ["src", "*.config.ts"]
+}
