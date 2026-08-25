@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# Design System
+
+React 19 components built with styled-components and design tokens.
+
+## Install
+
+```sh
+pnpm add @100xbansal/ui styled-components react react-dom
+```
+
+## Usage
+
+Wrap your app once in `DesignSystemProvider`. It provides the theme, color mode, and global styles.
+
+```tsx
+import { Button, DesignSystemProvider } from '@100xbansal/ui';
+
+export function App() {
+  return (
+    <DesignSystemProvider defaultColorMode="light">
+      <Button variant="primary">Get started</Button>
+    </DesignSystemProvider>
+  );
+}
+```
+
+Use the **Theme** toolbar button above to switch between light and dark mode.
+
+## Packages
+
+| Package              | Purpose                                          |
+| -------------------- | ------------------------------------------------ |
+| `@100xbansal/tokens` | Raw design tokens: palette, spacing, type, radii |
+| `@100xbansal/ui`     | Components, theme, and `DesignSystemProvider`    |

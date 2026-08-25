@@ -1,0 +1,4 @@
+{
+  "extends": "@100xbansal/typescript-config/react-library.json",
+  "include": [".storybook/**/*", "src", "*.config.ts"]
+}
