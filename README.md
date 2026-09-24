@@ -8,6 +8,14 @@ React 19 design system: a Turborepo + pnpm monorepo with styled-components and S
 | [`@100xbansal/tokens`](packages/tokens)   | Design tokens                                 |
 | [`@100xbansal/storybook`](apps/storybook) | Component docs and playground (private)       |
 
+## Documentation
+
+| Doc                                  | Read it to…                                                  |
+| ------------------------------------ | ------------------------------------------------------------ |
+| [Architecture](docs/ARCHITECTURE.md) | Understand the packages, build, source resolution, and tests |
+| [Contributing](CONTRIBUTING.md)      | Set up the repo, add a component, open a pull request        |
+| [Releasing](docs/RELEASING.md)       | Publish to npm and use the packages in other projects        |
+
 ## Development
 
 Requires Node 22+ and pnpm 11.
@@ -30,8 +38,10 @@ Versioning uses [Changesets](https://github.com/changesets/changesets).
 ```sh
 pnpm changeset          # describe your change
 pnpm version-packages   # bump versions and write changelogs
-pnpm release            # build and publish to npm
+pnpm release            # build and publish to npm (run in a real terminal for 2FA)
 ```
+
+Full steps: [docs/RELEASING.md](docs/RELEASING.md).
 
 ## License
 
