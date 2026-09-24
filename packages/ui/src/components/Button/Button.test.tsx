@@ -32,6 +32,24 @@ describe('Button', () => {
     expect(onClick).not.toHaveBeenCalled();
   });
 
+  it('swaps the label for loadingText while loading', () => {
+    renderWithTheme(
+      <Button loading loadingText="Saving…">
+        Save
+      </Button>,
+    );
+    expect(screen.getByRole('button', { name: 'Saving…' })).toBeDisabled();
+  });
+
+  it('keeps the accessible name of an icon-only button while loading', () => {
+    renderWithTheme(
+      <Button iconOnly loading aria-label="Add item">
+        <svg aria-hidden />
+      </Button>,
+    );
+    expect(screen.getByRole('button', { name: 'Add item' })).toHaveAttribute('aria-busy', 'true');
+  });
+
   it('forwards ref as a regular prop', () => {
     const ref = createRef<HTMLButtonElement>();
     renderWithTheme(<Button ref={ref}>Save</Button>);
