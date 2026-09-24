@@ -2,11 +2,11 @@
 
 React 19 design system: a Turborepo + pnpm monorepo with styled-components and Storybook 10.
 
-| Package                                 | Description                                   |
-| --------------------------------------- | --------------------------------------------- |
-| [`@100xbansal/ui`](packages/ui)         | Components, theme, and `DesignSystemProvider` |
-| [`@100xbansal/tokens`](packages/tokens) | Design tokens                                 |
-| [`storybook`](apps/storybook)           | Component docs and playground (private)       |
+| Package                                   | Description                                   |
+| ----------------------------------------- | --------------------------------------------- |
+| [`@100xbansal/ui`](packages/ui)           | Components, theme, and `DesignSystemProvider` |
+| [`@100xbansal/tokens`](packages/tokens)   | Design tokens                                 |
+| [`@100xbansal/storybook`](apps/storybook) | Component docs and playground (private)       |
 
 ## Development
 
@@ -21,7 +21,7 @@ pnpm lint
 pnpm typecheck
 ```
 
-Story tests run in a real browser. Install it once with `pnpm --filter storybook exec playwright install chromium`.
+Story tests run in a real browser. Install it once with `pnpm --filter @100xbansal/storybook exec playwright install chromium`.
 
 ## Releasing
 

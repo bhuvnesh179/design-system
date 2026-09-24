@@ -87,7 +87,7 @@ pnpm turbo run typecheck lint test --filter=@100xbansal/ui
 pnpm turbo run build --filter=@100xbansal/ui
 ```
 
-Storybook story tests (`pnpm --filter storybook test`) need Playwright Chromium. Run them if
+Storybook story tests (`pnpm --filter @100xbansal/storybook test`) need Playwright Chromium. Run them if
 Chromium is installed; otherwise say you skipped them.
 
 ## 5. Changeset

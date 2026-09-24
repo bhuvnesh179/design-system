@@ -7,7 +7,7 @@ argument-hint: [changeset | version | publish]
 # Release
 
 Published packages: `@100xbansal/ui`, `@100xbansal/tokens`. Everything else
-(`storybook`, `@100xbansal/eslint-config`, `@100xbansal/typescript-config`) is private
+(`@100xbansal/storybook`, `@100xbansal/eslint-config`, `@100xbansal/typescript-config`) is private
 and never gets a changeset.
 
 The flow has three stages. Do only the stage the user asked for; if they said "release"
@@ -62,8 +62,10 @@ Publishing is irreversible (npm won't let you reuse a version). Before running a
 1. Confirm with the user: the versions going out, the target registry (`npm config get registry`),
    and that they're logged in (`npm whoami`). If `whoami` fails, ask them to run
    `! npm login` themselves. Never handle tokens yourself.
-2. `.changeset/config.json` has `"access": "restricted"`. Scoped packages publish **private** by
-   default. If the user wants them public on npm, ask before changing it to `"public"`.
+2. Packages publish **public** (`"access": "public"` in `.changeset/config.json` and each
+   package's `publishConfig`). Ask before changing that.
+   If npm asks for 2FA/browser confirmation, the command can't finish here: ask the user to run
+   `! pnpm release` themselves.
 3. Only after an explicit "yes": `pnpm release` (builds all packages, then `changeset publish`,
    which publishes every package whose version isn't on the registry yet and creates git tags).
 4. Report what was published, and remind the user to push the tags: `git push --follow-tags`.

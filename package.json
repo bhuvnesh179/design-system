@@ -9,8 +9,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "storybook": "turbo run dev --filter=storybook",
-    "build-storybook": "turbo run build --filter=storybook",
+    "storybook": "turbo run dev --filter=@100xbansal/storybook",
+    "build-storybook": "turbo run build --filter=@100xbansal/storybook",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",
